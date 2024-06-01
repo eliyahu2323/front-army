@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "front-Armi-8101",
+    "slug": "front-Armi-8101",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Alexandroni.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/IDF.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        }
+      }
+    },
+    "packagerOpts": {
+      "proxy": "https://83-229-71-121.cloud-xip.com:3000"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Alexandroni.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ],
+      "package": "com.android.Armi8101"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "069dee42-15f4-4bf9-98ad-d924e9e6669b"
+      }
+    }
+  }
+}
